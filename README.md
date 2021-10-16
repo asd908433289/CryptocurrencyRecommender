@@ -20,7 +20,7 @@
 ## **Guide**
 
 <p align="center">
-<img src = "https://res.cloudinary.com/daufq6nuh/image/upload/v1633145810/QQ%E5%9B%BE%E7%89%8720211001233416_vxl30j.png" style = "
+<img src = "https://user-images.githubusercontent.com/73798628/137598599-b354eaac-0af2-4ba7-9b1d-5388ed48ae6d.png" style = "
   width: 100%;"/> 
 </p>
 
