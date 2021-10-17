@@ -10,10 +10,10 @@ https://cryptocurrencyrecommender.tiiny.site/
 1. Clone this repository
 2. Open the project in VS Code
 3. Open a new terminal in VS Code
-4. Navigate to Frontend/my-app dirctory
+4. Navigate to Frontend/my-app directory
 5. Type and run command: npm install
 6. Type and run command: npm start
-7. Open a another new terminal in VS Code
+7. Open another new terminal in VS Code
 8. Navigate to Backend/ directory
 9. Type and run command: npm install
 10. Type and run command: nodemon app/app.js
