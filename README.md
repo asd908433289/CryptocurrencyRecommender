@@ -31,7 +31,11 @@ https://cryptocurrencyrecommender.tiiny.site/
 
 
 
-
+## **Questionnarie**
+1. Short cuts that taken during this project implementation due to timelimit are simple webpage design, inflexible functions, and not fully optimized in term of memory and time.
+2. Even though this project is pretty simple, but it still requires both frontend and backend to work closely with each other. I don't belive any part of this project is over-designed because during implementation I was trying my best to keep the development as simple as possible.
+3. If this webpage has 100 users/sec traffic, then I will have to optimize the web scraping part of server-side implementation. Since I use Puppeteer to read cryptocurrency prices from dynamic pages, I have to somehow avoid duplicated-reading cryptocurrency prices from same exchange platform if multiple users are requesting the samething.
+4. To make this project more practical in real life, I will add more exchanges/sources and cryptocurrencies. If I am a big fan of selling/buying cryptocurrency, then I probably I want to compare the selling and buying prices of bitcoin across mutiple exchange platforms. In such way I can optimize the profit I can make. 
 
 ## **Built With**
 * Express.js, Node.js, React.js
