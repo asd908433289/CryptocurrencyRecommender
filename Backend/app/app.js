@@ -19,7 +19,7 @@ app.get("/blockChain", async (req, res) => {
         await page.waitForSelector ('body');
 
         let bitcoin = await page.evaluate (() => {
-            let sellPriceTable = document.body.querySelector('.cqNwHH');
+            let sellPriceTable = document.body.querySelector('.gnqWTk');
             let allSellPosts = sellPriceTable.querySelectorAll('.row');
             var sellPrices = [];
             allSellPosts.forEach (item => {
@@ -31,7 +31,7 @@ app.get("/blockChain", async (req, res) => {
                 sellPrices.push( parseFloat(price) );
             });
 
-            let buyPriceTable = document.body.querySelector('.jFhahS');
+            let buyPriceTable = document.body.querySelector('.lmkCNx');
             let allBuyPosts = buyPriceTable.querySelectorAll('.row');
             var buyPrices = [];
             allBuyPosts.forEach (item => {
@@ -62,7 +62,7 @@ app.get("/blockChain", async (req, res) => {
         await page2.waitForSelector ('body');
 
         let ethereum = await page2.evaluate (() => {
-            let sellPriceTable = document.body.querySelector('.cqNwHH');
+            let sellPriceTable = document.body.querySelector('.gnqWTk');
             let allSellPosts = sellPriceTable.querySelectorAll('.row');
             var sellPrices = [];
             allSellPosts.forEach (item => {
@@ -74,7 +74,7 @@ app.get("/blockChain", async (req, res) => {
                 sellPrices.push( parseFloat(price) );
             });
 
-            let buyPriceTable = document.body.querySelector('.jFhahS');
+            let buyPriceTable = document.body.querySelector('.lmkCNx');
             let allBuyPosts = buyPriceTable.querySelectorAll('.row');
             var buyPrices = [];
             allBuyPosts.forEach (item => {
@@ -98,6 +98,7 @@ app.get("/blockChain", async (req, res) => {
     
         
         res.send({
+            success: true,
             bitcoin: bitcoin,
             ethereum: ethereum
         });
@@ -207,6 +208,7 @@ app.get("/binance", async (req, res) => {
 
 
         res.send({
+            success: true,
             bitcoin: bitcoin,
             ethereum: ethereum
             

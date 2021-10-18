@@ -12,12 +12,17 @@ const BitcoinTable = ()=>{
     const blockChainRequest = async ()=>{
       try{
         const response = await axios.get('http://localhost:8081/blockChain');
-        setBlockchainLowestSelling(response.data.bitcoin.lowestSellPrice);
-        setBlockchainHighestBuying(response.data.bitcoin.highestBuyPrice);
+        if(response.data.success === true){
+          setBlockchainLowestSelling(response.data.bitcoin.lowestSellPrice);
+          setBlockchainHighestBuying(response.data.bitcoin.highestBuyPrice);
+        }
+        else{
+          alert("Try to refresh the page to reload the content of this page. Sometime HTTP request might fail due to large latency.");
+        }
+        
       }
       catch(e){
-        console.log(e.message);
-        blockChainRequest();
+        alert("Try to refresh the page to reload the content of this page. Sometime HTTP request might fail due to large latency.");
       }
         
        
@@ -26,12 +31,17 @@ const BitcoinTable = ()=>{
    const binanceRequest = async ()=>{
      try{
       const response = await axios.get('http://localhost:8081/binance');
-      setBinanceLowestSelling(response.data.bitcoin.lowestSellPrice);
-      setBinanceHighestBuying(response.data.bitcoin.highestBuyPrice);
+      if(response.data.success === true){
+        setBinanceLowestSelling(response.data.bitcoin.lowestSellPrice);
+        setBinanceHighestBuying(response.data.bitcoin.highestBuyPrice);
+      }
+      else{
+        alert("Try to refresh the page to reload the content of this page. Sometime HTTP request might fail due to large latency.");
+      }
+      
      }
      catch(e){
-      console.log(e.message);
-      binanceRequest();
+      alert("Try to refresh the page to reload the content of this page. Sometime HTTP request might fail due to large latency.");
      }
     
    
