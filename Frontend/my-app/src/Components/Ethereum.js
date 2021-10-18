@@ -10,17 +10,34 @@ const EthereumTable = ()=>{
     const [binanceHighestBuying, setBinanceHighestBuying] = useState("Loading");
 
     const blockChainRequest = async ()=>{
+      try{
         const response = await axios.get('http://localhost:8081/blockChain');
-       
         setBlockchainLowestSelling(response.data.ethereum.lowestSellPrice);
         setBlockchainHighestBuying(response.data.ethereum.highestBuyPrice);
+      }
+      catch(e){
+        console.log(e.message);
+        blockChainRequest();
+
+      }
+       
+        
+        
    }
 
    const binanceRequest = async ()=>{
-    const response = await axios.get('http://localhost:8081/binance');
+     try{
+      const response = await axios.get('http://localhost:8081/binance');
+      setBinanceLowestSelling(response.data.ethereum.lowestSellPrice);
+      setBinanceHighestBuying(response.data.ethereum.highestBuyPrice);
+     }
+     catch(e){
+      console.log(e.message);
+      binanceRequest();
+     }
     
-    setBinanceLowestSelling(response.data.ethereum.lowestSellPrice);
-    setBinanceHighestBuying(response.data.ethereum.highestBuyPrice);
+    
+    
 }
  
    useEffect(()=>{
